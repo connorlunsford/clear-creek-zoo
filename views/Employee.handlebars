@@ -1,0 +1,66 @@
+<h1 id='title'>Employee</h1>
+
+<input type="checkbox" id="show_names">
+<label for='radio' id='show_label'>Show names instead of ID?</label>
+<br>
+
+<div id='info'>
+
+    <table id='table'>
+        <thead>
+            <tr id='head'>
+                <th id='id_name'>emid</th>
+                <th id='jid_name'>jid</th>
+                <th>fname</th>
+                <th>lname</th>
+                <th>salary</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id='tbody'>
+            {{#each results}}
+            <tr>
+                <td>{{this.emid}}</td>
+                <td>{{this.jid}}</td>
+                <td>{{this.fname}}</td>
+                <td>{{this.lname}}</td>
+                <td>{{this.salary}}</td>
+                <td class='button'><button class='update_button'>Update</button></td>
+                <td class='button'><button class='delete_button'>Delete</button></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <h3 id='message'></h3>
+
+    <h2>Insert into Employee</h2>
+
+    <table>
+            <thead>
+                <tr>
+                    <th><label for='name'>JID</label></th>
+                    <th><label for='biome'>FNAME</label></th>
+                    <th><label for='biome'>LNAME</label></th>
+                    <th><label for='biome'>SALARY</label></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <form>
+                    <tr>
+                        <td><input type='number' id='jid_insert'></td>
+                        <td><input type='text' id='fname_insert'></td>
+                        <td><input type='text' id='lname_insert'></td>
+                        <td><input type='number' id='salary_insert'></td>
+                        <td><input type='submit' id='employee_insert'></td>
+                    </tr>
+                </form>
+            </tbody>
+    </table>
+
+</div>
+
+<script src='js/employee.js'></script>
+<script src='js/delete.js'></script>

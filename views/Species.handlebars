@@ -1,0 +1,73 @@
+<h1 id='title'>Species</h1>
+
+<div id='info'>
+
+    <table id='table'>
+        <thead>
+            <tr id='head'>
+                <th id='id_name'>sid</th>
+                <th>name</th>
+                <th>diet</th>
+                <th>habitat</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id='tbody'>
+            {{#each results}}
+            <tr>
+                <td>{{this.sid}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.diet}}</td>
+                <td>{{this.habitat}}</td>
+                <td class='button'><button class='update_button'>Update</button></td>
+                <td class='button'><button class='delete_button'>Delete</button></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <h3 id='message'></h3>
+
+    <h2>Insert into Habitat</h2>
+
+    <table>
+            <thead>
+                <tr>
+                    <th><label for='name'>NAME</label></th>
+                    <th><label for='biome'>DIET</label></th>
+                    <th><label for='habitat'>HABITAT</label></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <form>
+                    <tr>
+                        <td><input type='text' id='name_insert'></td>
+                        <td>
+                            <select id='diet_insert'>
+                                <option value='Carnivore'>Carnivore</option>
+                                <option value='Omnivore'>Omnivore</option>
+                                <option value='Herbivore'>Herbivore</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id='habitat_insert'>
+                                <option value='Arctic'>Arctic</option>
+                                <option value='Savannah'>Savannah</option>
+                                <option value='Rainforest'>Rainforest</option>
+                                <option value='Grassland'>Grassland</option>
+                                <option value='Wetland'>Wetland</option>
+                                <option value='Desert'>Desert</option>
+                            </select>
+                        </td>
+                        <td><input type='submit' id='species_insert'></td>
+                    </tr>
+                </form>
+            </tbody>
+    </table>
+
+</div>
+
+<script src='js/species.js'></script>
+<script src='js/delete.js'></script>

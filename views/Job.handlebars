@@ -1,0 +1,50 @@
+<h1 id='title'>Job</h1>
+
+<div id='info'>
+
+    <table id='table'>
+        <thead>
+            <tr id='head'>
+                <th id='id_name'>jid</th>
+                <th>title</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id='tbody'>
+            {{#each results}}
+            <tr>
+                <td>{{this.jid}}</td>
+                <td>{{this.title}}</td>
+                <td class='button'><button class='update_button'>Update</button></td>
+                <td class='button'><button class='delete_button'>Delete</button></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <h3 id='message'></h3>
+
+    <h2>Insert into Job</h2>
+
+    <table>
+            <thead>
+                <tr>
+                    <th><label for='title'>TITLE</label></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <form>
+                    <tr>
+                        <td><input type='text' id='title_insert'></td>
+                        <td><input type='submit' id='job_insert'></td>
+                    </tr>
+                </form>
+            </tbody>
+    </table>
+
+</div>
+
+<script src='js/job.js'></script>
+<script src='js/delete.js'></script>

@@ -1,0 +1,69 @@
+<h1 id='title'>Enrichment</h1>
+
+<input type="checkbox" id="show_names">
+<label for='radio' id='show_label'>Show names instead of ID?</label>
+<br>
+
+<div id='info'>
+
+    <table id='table'>
+        <thead>
+            <tr id='head'>
+                <th id='id_name'>enid</th>
+                <th id='sid_name'>sid</th>
+                <th>name</th>
+                <th>type</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id='tbody'>
+            {{#each results}}
+            <tr>
+                <td>{{this.enid}}</td>
+                <td>{{this.sid}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.type}}</td>
+                <td class='button'><button class='update_button'>Update</button></td>
+                <td class='button'><button class='delete_button'>Delete</button></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <h3 id='message'></h3>
+
+    <h2>Insert into Enrichment</h2>
+
+    <table>
+            <thead>
+                <tr>
+                    <th><label for='sid'>SID</label></th>
+                    <th><label for='name'>NAME</label></th>
+                    <th><label for='type'>TYPE</label></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <form>
+                    <tr>
+                        <td><input type='number' id='sid_insert'></td>
+                        <td><input type='text' id='name_insert'></td>
+                        <td>
+                            <select id='type_insert'>
+                                <option value='Food'>Food</option>
+                                <option value='Tactile'>Tactile</option>
+                                <option value='Structural'>Structural</option>
+                                <option value='Sensory'>Sensory</option>
+                            </select>
+                        </td>
+                        <td><input type='submit' id='enrichment_insert'></td>
+                    </tr>
+                </form>
+            </tbody>
+    </table>
+
+</div>
+
+<script src='js/enrichment.js'></script>
+<script src='js/delete.js'></script>
